@@ -8,24 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <header>
+        <script>
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("JavaScript is running!"); // Check if this prints in the console
+    alert("JS is working!"); // Test if an alert pops up when the page loads
+
+    const images = [
+        'heroimg/hero1.jpg'
+
+    ];
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    console.log(randomImage); // Check if the image path is correct
+
+    document.querySelector('.hero-section').style.backgroundImage = `url(${randomImage})`;
+});
+
+        </script>
         <div class="hero-section">
-            <script>
-                // Array of image paths
-                const images = [
-                    '/heroimg/hero1.jpg',
-                    '/heroimg/hero2.jpg',
-                    '/heroimg/hero3.jpg',
-                    '/heroimg/hero4.jpg'
-                ];
-            
-                // Get a random image
-                const randomImage = images[Math.floor(Math.random() * images.length)];
-            
-                // Set the random image as the background
-                document.querySelector('.hero-section').style.backgroundImage = `url(${randomImage})`;
-            </script>
             <nav class="navbar">
                 <h1 class="logo">Heilsuafl</h1>
                 <ul>
