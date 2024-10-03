@@ -9,7 +9,9 @@
 
 body {
     background-color: #f0f2f5;
-    color: #333;
+    color: #000000;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
 }
 
 header {
@@ -18,17 +20,19 @@ header {
 }
 
 .titill {
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 10px; /* Left margin to keep it off the edge */
+    margin-top: 20px; /* Initial top margin */
+    text-align: left; /* Left-aligned by default */
+    color: #000000; /* Gray color similar to title */
 }
 
 .texti {
     margin-top: 50px;
     text-align: center;
 }
+
 .hero-section {
     background-size: cover;
-    
     background-position: center;
     height: 100vh;
     display: flex;
@@ -41,30 +45,32 @@ header {
     overflow: hidden;
 }
 
-
 .navbar {
-    position: absolute;
-    top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20px; /* Padding remains */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute; /* Keep navbar absolute for positioning */
+    top: 0; /* Stick to top */
+    background-color: transparent; /* Remove background color entirely */
 }
 
 .frontpage {
     font-size: 3.3rem;
-    text-shadow: 2px 2px 2px rgba(0,0,0, 0.25);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    margin: 0; /* Ensure no margin */
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 3rem; /* Adjusted for better visibility */
     font-weight: 600;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
+    gap: 20px; /* Space between menu items */
 }
 
 .navbar ul li {
@@ -72,12 +78,12 @@ header {
 }
 
 .navbar ul li a {
-     /* Any lightness value below the threshold will result in white, any above will result in black */
-  --switch: calc((var(--light) - var(--threshold)) * -100%);
-  color: hsl(0, 0%, var(--switch));
+    --switch: calc((var(--light) - var(--threshold)) * -100%);
+    color: hsl(0, 0%, var(--switch));
     text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s ease;
+    font-size: 15pt;
+    font-weight: 550;
+    transition: color 0.7s ease;
 }
 
 .navbar ul li a:hover {
@@ -87,6 +93,7 @@ header {
 .hero-content {
     max-width: 600px;
     padding: 20px;
+    margin-top: 0; /* Ensure there's no margin */
 }
 
 .hero-content h2 {
@@ -113,6 +120,7 @@ header {
     background-color: #e6b800;
 }
 
+/* Cards Container */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -141,20 +149,6 @@ header {
     padding: 20px;
     width: 100%; /* Ensure the card takes full width of the anchor */
 }
-
-
-@media (max-width: 768px) {
-    .cardmain {
-        width: calc(50% - 10px); /* Two cards per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .cardmain {
-        width: calc(100% - 20px); /* One card per row on very small screens */
-    }
-}
-
 
 .card img {
     width: 100%;
@@ -186,8 +180,6 @@ header {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-
-
 
 .card-btn:hover {
     background-color: #45a049;
@@ -251,13 +243,13 @@ footer {
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-.card .calories, .card .time {
+.card .calories,
+.card .time {
     font-size: 1.1rem;
     font-weight: 600;
     color: #4caf50;
     margin-top: 10px;
 }
-
 
 /* Contact Form */
 .contact-container {
@@ -342,25 +334,28 @@ footer {
     background-color: #45a049;
 }
 
-/* Responsive Styles lalalala */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .cards-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px; /* Reduced gap for mobile */
     }
 
     .card {
-        width: 80%; /* Reduced card width for mobile */
+        width: 80%; /* Adjust card width for mobile */
         margin: 20px auto; /* Center cards */
+    }
+
+    .navbar {
+        visibility: hidden;
+    }
+
+    .titill {
+        text-align: center; /* Center title on mobile */
     }
 
     .hero-content h2 {
         font-size: 2.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
     }
 
     .contact-card {
@@ -368,7 +363,7 @@ footer {
     }
 
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* One column on mobile */
     }
 
     .page-header {
@@ -386,5 +381,16 @@ footer {
     .page-header p {
         font-size: 1.1rem;
         color: #555;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cardmain {
+        width: calc(100% - 20px); /* One card per row on very small screens */
+    }
+
+    .navbar ul li {
+        margin-left: 0; /* Remove margin for mobile */
     }
 }
