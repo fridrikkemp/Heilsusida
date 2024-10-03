@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heilsusíðan</title>
+    <title>Heilsuafl</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <header>
         <div class="hero-section">
+            <script>
+                // Array of image paths
+                const images = [
+                    '/heroimg/hero1.jpg',
+                    '/heroimg/hero2.jpg',
+                    '/heroimg/hero3.jpg',
+                    '/heroimg/hero4.jpg'
+                ];
+            
+                // Get a random image
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+            
+                // Set the random image as the background
+                document.querySelector('.hero-section').style.backgroundImage = `url(${randomImage})`;
+            </script>
             <nav class="navbar">
                 <h1 class="logo">Heilsuafl</h1>
                 <ul>
@@ -19,8 +35,8 @@
                 </ul>
             </nav>
             <div class="hero-content">
-                <h2>Velkomin á Heilsuafl</h2>
-                <p>Placehoder placeholder placeholder placeholder </p>
+                <h1 class="frontpage">Velkomin á Heilsuafl</h1>
+                <p style="text-shadow: 2px 2px 2px rgba(0,0,0, 0.25);">Placehoder placeholder placeholder placeholder </p>
                 <a href="uppskriftir.html" class="hero-btn">Uppskriftir</a>
                 <a href="raektarplon.html" class="hero-btn">Ræktarplön</a>
                 <a href="hafa_samband.html" class="hero-btn">Fleira</a>
