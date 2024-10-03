@@ -9,22 +9,7 @@
 </head>
 <body>
     <header>
-        <script>
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("JavaScript is running!"); // Check if this prints in the console
-    alert("JS is working!"); // Test if an alert pops up when the page loads
 
-    const images = [
-        'heroimg/hero1.jpg'
-
-    ];
-    const randomImage = images[Math.floor(Math.random() * images.length)];
-    console.log(randomImage); // Check if the image path is correct
-
-    document.querySelector('.hero-section').style.backgroundImage = `url(${randomImage})`;
-});
-
-        </script>
         <div class="hero-section">
             <nav class="navbar">
                 <h1 class="logo">Heilsuafl</h1>
@@ -45,5 +30,20 @@ document.addEventListener("DOMContentLoaded", function() {
     </header>
     <main>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("JavaScript is running!"); // Check if this prints in the console
+            alert("JS is working!"); // Test if an alert pops up when the page loads
+        
+            const images = [
+                'heroimg/9223.jpg'
+            ];
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            console.log(randomImage); // Check if the image path is correct
+        
+            document.querySelector('.hero-section').style.backgroundImage = `url(${randomImage})`;
+        });
+        
+                </script>
 </body>
 </html>
